@@ -1,0 +1,68 @@
+html{
+  background-image: url("./image/shop-quan-ao-o-thu-dau-mot-4.jpg") ;
+ 
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*  căn chinh class cho giữa trang */
+.container{
+    justify-content: center;
+    margin:0 auto;
+}
+input[type=text] {
+    width: 50%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=email] {
+    width: 50%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+
+  input[type=password] {
+    width: 50%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+
+form{
+    margin: 20pt auto;
+    margin-top: 40pt;
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-color: cornflowerblue;
+    
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+button{
+  width: 100pt;
+}
+/* thiết kế 1 link chữ bt thành 1 button */
+.buttonLink{
+  padding: 5pt 10pt;
+  border: solid 2pt blue;
+  border-radius: 20pt;
+  background-color: cornsilk;
+}
+/* hover là về để chuột trong khung vị trí này
+ */
+.buttonLink:hover{
+  background-color: aqua;
+}
+image{
+  opacity: 0.7;
+}

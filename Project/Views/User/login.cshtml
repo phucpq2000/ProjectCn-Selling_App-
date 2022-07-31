@@ -1,0 +1,46 @@
+﻿@model Project.Models.User
+
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>Login</h2>
+
+<link href="~/Content/file/css/CreateAccount.css" rel="stylesheet" />
+
+  
+        
+
+<div class="container">
+    @using (Html.BeginForm("login", "User", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+
+    <div class='form-row'>
+        @Html.LabelFor(m => m.Name, new {  })
+        @Html.TextBoxFor(m => m.Name, new { })
+
+        <h6 style="color:red;">@ViewBag.Error</h6>
+    </div>
+
+
+
+    <div class='form-row'>
+        @Html.LabelFor(m => m.Password, new { })
+        @Html.PasswordFor(m => m.Password, new { })
+        <h6 style="color:red;">@ViewBag.Error</h6>
+    </div>
+
+        <div id="button">
+            <button id="button" >Sign Up</button>
+               <button><a href="@Url.Action("Create", "User")">Resister</a> </button>
+
+        </div>
+
+
+        <!-- <a class="buttonLink"  href="/BTweek1/ep3/index.html" >Sing Up</a> -->
+    }
+ 
+
+
+    </div>
+    

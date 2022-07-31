@@ -1,0 +1,69 @@
+﻿@model List<Project.Models.ShopingPhone>
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>cart</h2>
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="product-content-right">
+                    <div class="woocommerce">
+                        <form method="post" action="#">
+                            <table cellspacing="0" class="shop_table cart">
+                                <thead>
+                                    <tr>
+                                        <th class="product-remove">&nbsp;</th>
+                                        <th class="product-thumbnail">&nbsp;</th>
+                                        <th class="product-name">Product</th>
+                                        <th class="product-price">Price</th>
+                                        <th class="product-quantity">Quantity</th>
+                                        <th class="product-subtotal">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr class="cart_item">
+                                            <td class="product-remove">
+                                                <a title="Remove this item" class="remove" href="#">×</a>
+                                            </td>
+
+                                            <td class="product-thumbnail">
+                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/@item.Productdetail.Product_img"></a>
+                                            </td>
+
+                                            <td class="product-name">
+                                                <a href="single-product.html">@item.Productdetail.Product_name</a>
+                                            </td>
+
+                                            <td class="product-price">
+                                                <span>@item.Productdetail.Product_money</span>
+                                            </td>
+
+                                            <td class="product-quantity">
+                                                <span>@item.Quantity</span>
+                                         </td>
+
+                                            <td class="product-subtotal">
+                                                <span class="amount">@(item.Productdetail.Product_money * item.Quantity)</span>
+                                            </td>
+                                        </tr>
+                                       
+                                    }
+
+                                </tbody>
+                            </table>
+                        </form>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

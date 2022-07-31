@@ -1,0 +1,59 @@
+﻿@model Project.Models.User
+<h2>create</h2>
+<link href="~/Content/file/css/CreateAccount.css" rel="stylesheet" />
+<div class="container">
+    
+
+        @using (Html.BeginForm("Create", "User", FormMethod.Post, new { @class = "form-horizontal form-label-left" }))
+        {
+
+            @Html.ValidationMessage("Create", new { @class = "text-danger" })
+            @Html.AntiForgeryToken()
+
+            <div class='form-row'>
+                <label for="Name">UserName </label>
+                @Html.TextBoxFor(x => x.Name, new { });
+                @Html.ValidationMessageFor(x => x.Name, "", new { })
+            </div>
+
+            <div class='form-row'>
+                <label for="Phone">Phone </label>
+                @Html.TextBoxFor(x => x.Phone, new { });
+                @Html.ValidationMessageFor(x => x.Phone, "", new { })
+            </div>
+
+            <div class='form-row'>
+                <label for="Email">Email </label>
+                @Html.TextBoxFor(x => x.Email, new { });
+                @Html.ValidationMessageFor(x => x.Email, "", new { })
+            </div>
+
+            <div class='form-row'>
+                <label for="Password">Password </label>
+                @Html.TextBoxFor(x => x.Password, new { });
+                @Html.ValidationMessageFor(x => x.Password, "", new { })
+            </div>
+
+
+
+
+            <div class="button">
+
+
+                <button type="submit" class="btn btn-primary">Create</button>
+
+            </div>
+
+
+
+            <!-- <a class="buttonLink"  href="/BTweek1/ep3/index.html" >Sing Up</a> -->
+        }
+
+
+</div>
+
+
+
+
+
+

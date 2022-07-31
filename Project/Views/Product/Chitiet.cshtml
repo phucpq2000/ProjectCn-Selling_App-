@@ -1,0 +1,128 @@
+﻿@model Project.Models.ShopingPhone
+@{
+    ViewBag.Title = "Chitiet";
+}
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Search Products</h2>
+                    <form action="">
+                        <input type="text" placeholder="Search products...">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Products</h2>
+                    <div class="thubmnail-recent">
+                        <img src="~/Content/img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                        <h2><a href=""></a></h2>
+                        <div class="product-sidebar-price">
+                            <ins></ins> <del></del>
+                        </div>
+                    </div>
+                    <div class="thubmnail-recent">
+                        <img src="~/Content/img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                        <h2><a href=""></a></h2>
+                        <div class="product-sidebar-price">
+                            <ins></ins> <del></del>
+                        </div>
+                    </div>
+                    <div class="thubmnail-recent">
+                        <img src="~/Content/img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                        <h2><a href=""></a></h2>
+                        <div class="product-sidebar-price">
+                            <ins></ins> <del></del>
+                        </div>
+                    </div>
+                    <div class="thubmnail-recent">
+                        <img src="~/Content/img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                        <h2><a href=""></a></h2>
+                        <div class="product-sidebar-price">
+                            <ins></ins> <del></del>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Recent Posts</h2>
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+
+                <div class="product-content-right">
+                    <div class="product-breadcroumb">
+                        <a href="">Home</a>
+                        <a href="">Category Name</a>
+                        <a href=""></a>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    <img src="~/Content/file/image/@Model.Productdetail.Product_img" alt="">
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                </ins>
+                            </div>
+                            <h2 class="product-name">Tên: @Model.Productdetail.Product_name</h2>
+                            <div class="product-inner-price">
+            
+                                <h2 class="product-name">Giá thành : @Model.Productdetail.Product_money $</h2>
+                                <h2 class="product-name">kích thước: @Model.Productdetail.Product_size</h2>
+                                <h2 class="product-name">Hãng: @Model.Productdetail.Product_company</h2>
+
+                                @using (Html.BeginForm("AddToCart", "Product", FormMethod.Post))
+                                {
+                                    
+                                    @Html.HiddenFor(m => m.Productdetail.Product_name)
+                                    @Html.HiddenFor(m => m.Productdetail.Product_money)
+
+                                    <div class="">
+                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    </div>
+                                    <button class="add_to_cart_button" type="submit" href="">Add to cart</button>
+                                    
+                                }
+
+
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
